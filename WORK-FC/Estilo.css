@@ -1,0 +1,573 @@
+:root {
+  /**** CORES PRIMÁRIAS *************/
+    --cor-verde: #00995D;
+    --cor-limao: #B1D34B;
+    --cor-rosa: #ED1651;
+    --cor-laranja: #F47920;
+    --cor-amarelo: #FFCB08;
+    --cor-fundo:#FFF0C7;
+    --cor-branco:#FFFFFF;
+  /**** ESCALA DE CINZA *************/
+  --cor-cinza:#60656C;
+  --cor-cinza-c:#9E9E9E;
+  --cor-cinza-bc:#CCCCCC;
+  --cor-cinza-clarissmo:#DEE2E6;
+  /**** CORES COMPLEMENTARES ************/
+  --cor-violeta: #A3238E;
+  --cor-verde-escuro:#00401A;
+  --cor-roxo:#411564;
+  --cor-verde-agua:#411564;
+  --cor-marrom: #682D00;
+  /**** TONS DE VERDE *************/
+  --cor-verde-esc:#245F40;
+  --cor-cinza-esv:#61856E;
+  --cor-cinza-esv-c:#A5B9AA;
+  --cor-verde-agua:#1DAA7D;
+  --cor-verde-agua-claro:#7AC0A0;
+  --cor-verde-l-c:#C4DC79;
+  --cor-verde-l-bc:#D4E5A3;
+  --cor-verde-l-claris:#E7F0CE;
+  /**** TONS DE QUENTES *************/
+  --cor-laranja-claro:#F69651;
+  --cor-laranja-bc:#FAB683;
+  --cor-laranja-esbranquisado: #FDD9BB;
+  --cor-amarelo-c:#FFD55B;
+  --cor-amarelo-bc:#FFE191;
+  --cor-amarelo-esbranquisado:#FFEEC5;
+  --cor-pardo-rose:#FFF1D2;
+  --cor-pardo-c:#FFF6E1;
+  --cor-pardo-esbranquisado:#FFFAEE;
+  --cor-salmao:#F0666F;
+  --cor-salmao-c:#F59695;
+  --cor-rosa-c:#FAC8C3;
+  /**** TONS FRIOS  ****************/
+  --cor-violeta-c:#B35FA4;
+  --cor-violeta-bc:#C68DBE;
+  --cor-violeta-esbrnquisado:#DEC1DD;
+  --cor-roxo-c:#62447F;
+  --cor-roxo-bc:#86729C;
+  --cor-roxo-esbranquisado:#B6ABCA;
+
+  /******  FONTE ********************/  
+  --font-default: 'Trebuchet MS';
+  --font-color: var (--cor-cinza);
+  --font-light-font-weight: 100;
+  --font-unimed: Unimed Slab bold;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #B1D34B;
+  padding: 24px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-left: 214px;
+}
+
+nav {
+  float: left;
+  width: 16%;
+  height: 664px;
+  background: #00995D;
+  padding: -43px;
+  margin-top: -58px;
+}
+
+article {
+   float: left;
+  padding: 31px;
+  width: 83%;
+  background-color: #f1f1f1;
+  height: 601px;
+  margin-top: -2px;
+
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/*------------------------------------*\
+              #TIPOGRAFIA
+\*------------------------------------*/
+.light{
+  font-family: var(--font-default);
+  font-style: var(--cor-cinza);
+  font-weight: 100;
+}
+
+.book{
+  font-family: var(--font-default);
+  font-style: var(--cor-cinza);
+  font-weight: 200;
+}
+
+.regular{
+  font-family: var(--font-default);
+  font-style: var(--cor-cinza);
+  font-weight: 400;
+}
+
+.bold{
+  font-family: var(--font-unimed);
+  font-style: var(--cor-cinza);
+  font-weight: bold;
+}
+
+.extraBold{
+  font-family: var(--font-default);
+  font-style: var(--cor-cinza);
+  font-weight: 800;
+}
+
+.black{
+  font-family: var(--font-default);
+  font-style: var(--cor-cinza);
+  font-weight:900;
+}
+
+.text1
+{
+  font-family: var(--font-default);
+  font-style:  var(--cor-cinza) bold;
+}
+
+
+/*------------------------------------*\
+               #BOTÕES   
+\*------------------------------------*/
+
+h3 {
+  color:var(--cor-verde);
+  text-align: center;
+  padding: 7px;
+  font-size: 16px;
+  font-family: var(--font-default);
+}
+
+/*Modelo 1*/
+.button{
+  width: 145px;
+  height: 35px;
+  margin: auto;
+  background: var(--cor-branco);
+  margin-top: 10px;
+  box-shadow: 3px 3px 6px #EEEEE0, 0 0 1em #CDCDC1; 
+  border-radius: 20px;
+}
+/*PASSAR O MOUSE */
+.button:hover{
+  width: 145px;
+  height: 35px;
+  margin: auto;
+  background:var(--cor-branco);
+  margin-top: 10px;
+  box-shadow: 0px 0px 0px 1px var(--cor-verde); 
+  border-radius: 20px;
+}
+/*PRESSIONAR BOTÃO */
+.button:active{
+  width: 145px;
+  height: 35px;
+  margin: auto;
+  background: var(--cor-verde);
+  margin-top: 10px;
+  box-shadow: 0px 0px 0px 1px var(--cor-verde); 
+  border-radius: 20px;
+}
+
+h3:active{
+  color: var(--cor-branco);
+}
+
+/*Modelo 2*/
+
+
+/*PRESSIONAR BOTÃO */
+.button{
+  width: 145px;
+  height: 35px;
+  margin: auto;
+  background: #00995D;
+  margin-top: 10px;
+  box-shadow: 0px 0px 0px 1px #00995D; 
+  border-radius: 20px;
+}
+
+.button:active{
+  width: 145px;
+  height: 35px;
+  margin: auto;
+  background: #BADDCC;
+  margin-top: 10px;
+  box-shadow: 0px 0px 0px 1px #BADDCC; 
+  border-radius: 20px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px;
+  /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: var(--cor-branco)
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+
+  nav,
+  article {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* dropbox*/
+.dropbtn {
+  background-color: #00995D;
+  color: var(--cor-branco);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+   min-width: 160px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #00995D;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  color: var(--cor-branco);
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #245F40}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #00995D;
+}
+
+/* Input Text **/
+
+input[type=text] {
+  width: 280px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  border-radius: 6px;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 1px solid #00995D;
+}
+
+/***** PESQUISA ******/
+
+#divBusca{
+  background-color: var(--cor-branco);
+  border-radius: 40px;
+  width: 350px;
+  height: 40px;;
+}
+ 
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:23px; 
+  font-size:14px;
+  font-family:Trebuchet MS;
+  font-style: italic;
+  text-decoration-color: #60656C;
+  border:none;
+  height:32px;
+  width:88%;
+}
+ 
+#btnBusca{
+  border:none;
+  float:right;
+  border-radius:100%;
+  background-image: url('file:///C:/Users/karoline.suzuki/Desktop/magnifying-glass.svg');
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+  background-color: #00995D;
+}
+ 
+#divBusca img{
+  float:right;
+}
+
+/**** modelo de PESQUISA 2  ****/
+#divBusca2{
+  background-color: var(--cor-branco);
+  border-radius: 40px;
+  width: 350px;
+  height: 40px;
+}
+ 
+#txtBusca2{
+  float: left;
+  background-color: #F1F2F1;
+  padding-left: 23px;
+  font-size: 14px;
+  font-family: Trebuchet MS;
+  font-style: italic;
+  text-decoration-color: #9E9E9E;
+  border: none;
+  border-radius: 47px;
+  height: 32px;
+  width: 89%
+}
+ 
+#btnBusca2{
+  border: none;
+    float: right;
+    border-radius: 100%;
+    background-image: url(file:///C:/Users/karoline.suzuki/Desktop/magnifying-glass.svg);
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    background-color: #00995D;
+    position: fixed;
+    display: inline;
+}
+ 
+#divBusca2 img{
+  float:right;
+  
+}
+
+
+
+
+ /** Switch **/
+
+.switch__container {
+  margin: 30px;
+  width: 120px;
+}
+
+.switch {
+  visibility: hidden;
+  position: absolute;
+ }
+
+.switch + label {
+  display: block;
+  position: relative;
+  outline: none;
+  user-select: none;
+}
+
+.switch--shadow + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch--shadow + label:after {
+  width: 62px;
+  background-color: var(--cor-branco);
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+.switch--shadow:checked + label:before {
+  background-color: #8ce196;
+}
+.switch--shadow:checked + label:after {
+  transform: translateX(60px);
+}
+
+/* Estilo Flat */
+.switch--flat + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch--flat + label:before,
+.switch--flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.switch--flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: var(--cor-branco);
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch--flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 56px;
+  background-color: #dddddd;
+  border-radius: 52px;
+  transition: margin 0.4s, background 0.4s;
+}
+.switch--flat:checked + label {
+  background-color: #8ce196;
+}
+.switch--flat:checked + label:after {
+  margin-left: 60px;
+  background-color: #8ce196;
+}
+
+/** switch 3 (nome não definido) **/
+
+
+/**** PAGINAÇÃO *********************/ 
+
+/** MARCADORES REDONDOS **/
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+  color: #00995D;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #00995D;
+  margin: 0 4px;
+  border-radius: 100%;
+}
+
+ul.pagination li a.active {
+  background-color: #00995D;
+  color: var(--cor-branco);
+  border: 1px solid #00995D;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #00995D;
+color:var(--cor-branco);}
+
+/** MARCADORES QUADRADOS ****/
+
+ul.paginationq li {display: inline;}
+
+ul.paginationq li a {
+  color: #00995D;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #00995D;
+  margin: 0 4px;
+  border-radius: 34%;
+}
+
+ul.paginationq li a.active {
+  background-color: #00995D;
+  color: var(--cor-branco);
+  border: 1px solid #00995D;
+}
+
+ul.paginationq li a:hover:not(.active) {background-color: #00995D;
+color:var(--cor-branco);}
