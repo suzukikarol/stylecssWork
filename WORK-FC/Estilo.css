@@ -271,66 +271,52 @@ footer {
   }
 }
 
-/* dropbox*/
-.dropbtn {
-  background-color: #00995D;
-  color: var(--cor-branco);
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-   min-width: 160px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #00995D;
-  min-width: 160px;
-}
-
-.dropdown-content a {
-  color: var(--cor-branco);
-  padding: 16px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #245F40}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #00995D;
-}
-
 /* Input Text **/
 
-input[type=text] {
-  width: 280px;
-  height: 48px;
-  padding: 12px 20px;
-  margin: 4px 0;
-  border: 1px solid #ccc;
-  -webkit-transition: 0.5s;
-  border-radius: 6px;
-  transition: 0.5s;
-  outline: none;
+form {
+  width: 500px;
 }
 
-input[type=text]:focus {
-  border: 1px solid #00995D;
+.form-group {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 15px;
+}
+.form-group label {
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.form-group input, .form-group select, .form-group textarea {
+  transition: all 0.3s ease;
+  border: 1px solid #9E9E9E;
+  border-radius: 5px;
+  display: block;
+  padding: 8px 14px;
+  width: 100%;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #00995d;
+}
+.form-group input:focus + label, .form-group select:focus + label, .form-group textarea:focus + label {
+  color: #00995d;
+}
+
+input[type="text"] {
+  width: 280px;
+  height: 42px;
+}
+
+.desable input{
+  display: block;
+  border-radius: 5px;
+  background-color: #DEE2E6;
+  border-color: #9E9E9E;
+}
+
+.desable>label{
+  color: #9E9E9E;
 }
 
 /***** PESQUISA ******/
@@ -413,9 +399,6 @@ input[type=text]:focus {
   float:right;
   
 }
-
-
-
 
  /** Switch **/
 
@@ -571,3 +554,182 @@ ul.paginationq li a.active {
 
 ul.paginationq li a:hover:not(.active) {background-color: #00995D;
 color:var(--cor-branco);}
+
+
+/*** BOTÃO SELECT - DROPDOWN ****/
+button, select {
+  text-transform: none;
+  width: 145px;
+  height: 40px;
+  color: white;
+  background-color: #00995D;
+  text-align: center;
+  text-align-last: center;
+  font-size: 16px;
+  font-family: Trebuchet MS;
+  border-radius: 10px;
+  }
+
+  select {
+    background-color: green;
+    color: white
+  }
+  select >option {
+    background-color: white;
+    color: black
+  }
+
+
+  /*** TOOLTIPS ***/
+
+  /** pra baixo ***/
+  .tooltiptop {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #245F40;
+  }
+
+  .tooltiptop .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #245F40;
+    color: #FFF;
+    text-align: center;
+    font-family: Trebuchet MS;
+    border-radius:4px;
+    padding: 5px 0;
+    position: absolute;
+    z-index:1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltiptop .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:#245F40 transparent transparent transparent;
+  }
+
+  .tooltiptop:hover .tooltiptext{
+    visibility: visible;
+  }
+
+  /** pra cima **/
+
+  .tooltipbottom {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #245F40;
+  }
+
+  .tooltipbottom .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #245F40;
+    color: #FFF;
+    text-align: center;
+    border-radius:4px;
+    padding: 5px 0;
+    position: absolute;
+    z-index:1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltipbottom .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left:50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #245F40 transparent;
+  }
+
+  .tooltipbottom:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /** pra esquerda **/
+  .tooltipleft {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #245F40;
+  }
+
+  .tooltipleft .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #245F40;
+    color: #FFF;
+    text-align: center;
+    border-radius:4px;
+    padding: 5px 0;
+    position: absolute;
+    z-index:1;
+    top: -5px;
+    right: 110%;
+  }
+
+.tooltipleft .tooltiptext::after {
+  content:"";
+  position: absolute;
+  top:50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #245F40;
+}
+
+.tooltipleft:hover .tooltiptext{
+  visibility: visible;
+}
+
+/** pra direita **/
+
+.tooltipright{
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #245F40;
+}
+
+.tooltipright .tooltiptext{
+  visibility: hidden;
+  width: 120px;
+  background-color: #245F40;
+  color: #FFF;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+
+}
+
+.tooltipright .tooltiptext::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #245F40 transparent transparent;
+}
+
+.tooltipright:hover .tooltiptext{
+  visibility: visible;
+}
+
+/** checkbox **/ 

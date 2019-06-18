@@ -15,4 +15,14 @@
 // <input type="button" id="button" onclick="mudarNome();" value="Ativo" />
 // </body>
 
-feather.replace()
+feather.replace();
+
+$('input:empty, textarea:empty').closest('label').addClass('empty');
+
+$('input').keyup(function () {
+    if ($(this).val().trim() !== '') {
+        $(this).closest('label').removeClass('empty');
+    } else {
+        $(this).closest('label').addClass('empty');
+    }
+});
