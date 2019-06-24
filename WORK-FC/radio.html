@@ -9,15 +9,41 @@
 </head>
 
 <body>
-    <div class="radio1">
-        <input type="radio" value="opt1">
-        <label>Opt 1</label>
+    <div>
+        <div>
+            <label class="radio radio1">
+                <input type="radio" name="r" value="1" checked>
+                <span class="radio-label radio1-label">Selecionado 1</span>
+            </label>
+
+            <label class="radio radio1">
+                <input type="radio" name="r" value="2">
+                <span class="radio-label radio1-label">Selecionado 2</span>
+            </label>
+            <label class="radio radio1">
+                <input type="radio" name="r" disabled>
+                <span class="radio-label radio1-label">Desabilitado</span>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label class="radio radio2">
+                <input name="radio" type="radio" checked>
+                <span class="radio-label radio2-label">Selecionado 1</span>
+            </label>
+
+            <label class="radio radio2">
+                <input name="radio" type="radio">
+                <span class="radio-label radio2-label">Selecionado 2</span>
+            </label>
+
+            <label class="radio radio2">
+                <input name="radio" type="radio" disabled>
+                <span class="radio-label radio2-label">Desabilitado</span>
+            </label>
+        </div>
+
     </div>
-    <div class="radio1">
-        <input type="radio" value="opt2">
-        <label>Opt 2</label>
-    </div>
-    <div class="radio2">
-        <input type="radio">
+
     </div>
 </body>
