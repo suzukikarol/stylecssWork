@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DataPicker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax
+    /libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<style>
+    .datepicker-modal {
+        max-width: 325px;
+        min-width: 300px;
+        max-height: none;
+    }
+
+    .datepicker-container.modal-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .datepicker-controls {
+        display: none;
+        justify-content: space-between;
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .datepicker-controls .selects-container {
+        display: flex;
+    }
+
+    .datepicker-controls .select-wrapper input {
+        border-bottom: none;
+        text-align: center;
+        margin: 0;
+    }
+
+    .datepicker-controls .select-wrapper input:focus {
+        border-bottom: none;
+    }
+
+    .datepicker-controls .select-wrapper .caret {
+        display: none;
+    }
+
+    .datepicker-controls .select-year input {
+        display: none;
+    }
+
+    .datepicker-controls .select-month input {
+        display: none;
+    }
+
+    .month-prev,
+    .month-next {
+        margin-top: -78px;
+        cursor: pointer;
+        padding: 0px;
+        background-color: transparent;
+        border: none;
+    }
+
+    /* Date Display */
+    .datepicker-date-display {
+        flex: 1 auto;
+        background-color: #00995D;
+        color: #fff;
+        padding: 0px 47px;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+        height: 49px;
+        font-size: 10px;
+    }
+
+    .datepicker-date-display .year-text {
+        font-size: 25px;
+        line-height: 23px;
+        color: #ffffff;
+        text-align: right;
+        padding-right: 15px;
+        padding-left: 127px;
+
+    }
+
+    .datepicker-date-display .date-text {
+        display: block;
+        font-size: 29px;
+        line-height: 0px;
+    }
+
+    /* Calendar */
+    .datepicker-calendar-container {
+        flex: 2.5 auto;
+    }
+
+    .datepicker-table {
+        width: 280px;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .datepicker-table thead {
+        border-bottom: none;
+    }
+
+    .datepicker-table th {
+        padding: 10px 5px;
+        text-align: center;
+    }
+
+    .datepicker-table tr {
+        border: none;
+    }
+
+    .datepicker-table abbr {
+        text-decoration: none;
+        color: #red;
+    }
+
+    .datepicker-table td {
+        border-radius: 50%;
+        padding: 0;
+    }
+
+    .datepicker-table td.is-today {
+        color: #ffffff;
+    }
+
+    .datepicker-table td.is-selected {
+        background-color: #fdeaeb;
+        color: #fff;
+    }
+
+    .datepicker-table td.is-outside-current-month,
+    .datepicker-table td.is-disabled {
+        color: #000;
+        pointer-events: none;
+    }
+
+    .datepicker-table-wrapper {
+        background: bisque;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .datepicker-day-button {
+        background-color: transparent;
+        border: none;
+        line-height: 38px;
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+        padding: 0 5px;
+        cursor: pointer;
+        color: inherit;
+    }
+
+    .datepicker-day-button:focus {
+        background-color: green;
+    }
+
+    /* Footer */
+    .datepicker-footer {
+        width: 280px;
+        margin: 0 auto;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .datepicker-cancel,
+    .datepicker-clear,
+    .datepicker-today,
+    .datepicker-done {
+        color: red;
+        padding: 0 1rem;
+    }
+
+    .datepicker-clear {
+        color: red;
+    }
+
+    ul#select-options-b3d52d71-9a45-2dc1-9a03-7d16de5d56d7 {
+        display: none;
+    }
+
+    ul#select-options-a8756d51-fcfa-487c-6feb-e9b4d0ef362d {
+        display: none;
+    }
+
+    /* anos */
+    ul#select-options-8ec0ea85-e201-7d49-6736-df7386522fa8 {
+        display: none;
+    }
+
+    /* meses */
+    ul#select-options-be630ca3-db80-33b9-7066-46e0f55e5759 {
+        display: none;
+    }
+
+    th {
+        background: #B1D34B;
+        border: 1px solid white;
+
+    }
+
+    /* Media Queries */
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col s12 m3"></div>
+            <div class="col s12 m6">
+                <h3>DatePicker</h3>
+                <form>
+                    <div class="input-field">
+                        <input type="text" class="datepicker">
+
+                    </div>
+                </form>
+            </div>
+            <div class="col s12 m3"></div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+
+        const Calender = document.querySelector('.datepicker');
+        M.Datepicker.init(Calender, {
+            format: 'dd/mm/yy'
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.datapicker').pickadate({
+                selectMonths: true,
+                selectYears: 15;
+            })
+        })
+    </script>
+
+</body>
+
+</html>

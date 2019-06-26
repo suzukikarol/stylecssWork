@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        $(function () {
+            $("#datepicker").datepicker({
+                dateFormat: "yy-mm-dd",
+                changeMonth: true
+            });
+        });
+
+        $(function () {
+            var from = $("#fromDate")
+                .datepicker({
+                    dateFormat: "yy-mm-dd",
+                    changeMonth: true
+                })
+                .on("change", function () {
+                    to.datapicker("option", "minDate", getDate(this));
+                }),
+                to = $("#toDate").datapicker({
+                    dateFormat: "yy-mm-dd",
+                    changeMonth: true
+                })
+                    .on("change", function () {
+                        from.datapicker("option", "maxDate", getDate(this));
+                    });
+
+            function getDate(element) {
+                var date;
+                var dateFormat = "yy-mm-dd";
+                try {
+                    date = $.datepicker.parseDate(dateFormat, element.value);
+                } catch (erro) {
+                    date = null;
+                }
+                return date;
+            }
+
+        });
+
+
+    </script>
+    <style>
+        div#ui-datepicker-div {
+            border-radius: 16px;
+        }
+
+        .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+            background: #00995D;
+            width: 271px;
+            height: 46px;
+            padding-left: -20px;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 10px;
+            padding: -5px;
+        }
+
+        .ui-datepicker-title {
+            color: white;
+        }
+
+        th {
+            background: #B1D34B;
+        }
+
+        span {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Datepicker</h2>
+    <p><input type="text" id="datepicker" /></p>
+
+    <h2>Date Range</h2>
+    <p>FROM<input type="text" id="fromDate" /> TO <input type="text" id="toDate" /> </p>
+</body>
+
+</html>
