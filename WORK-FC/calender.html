@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="datepicker-pt-BR.js"></script>
     <script>
+
+        $(function () {
+            $("#datepicker").datepicker({
+                showOtherMonths: true,
+                selectOtherMonths: true
+            });
+        });
+
         $(function () {
             $("#datepicker").datepicker();
         });
@@ -17,6 +26,7 @@
                 changeMonth: true
             });
         });
+
 
         $(function () {
             var from = $("#fromDate")
@@ -50,19 +60,20 @@
 
 
     </script>
+
     <style>
         div#ui-datepicker-div {
-            border-radius: 16px;
+            border-radius: 24px;
+            padding: 0px;
         }
 
         .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
             background: #00995D;
-            width: 271px;
-            height: 46px;
-            padding-left: -20px;
-            border-top-right-radius: 16px;
-            border-top-left-radius: 10px;
-            padding: -5px;
+            width: 297px;
+            height: 41px;
+            border-top-right-radius: 28px;
+            border-top-left-radius: 23px;
+
         }
 
         .ui-datepicker-title {
@@ -76,15 +87,132 @@
         span {
             color: white;
         }
+
+        a.ui-datepicker-next.ui-corner-all {
+            background-image: url('next.png');
+            background-repeat: no-repeat;
+            background-position-x: initial;
+            background-position-y: bottom;
+            margin-top: 6px;
+            margin-right: 8px;
+
+        }
+
+        a.ui-datepicker-prev.ui-corner-all {
+            background-image: url('left-arrow.png');
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-position-y: bottom;
+            margin-top: 6px;
+            margin-left: 9px;
+        }
+
+        a.ui-state-default.ui-priority-secondary {
+            color: #AAAAAA;
+        }
+
+
+        .ui-widget-header .ui-icon {
+            background-image: url('next.png');
+        }
+
+        .ui-icon,
+        .ui-widget-content .ui-icon {
+            background-image: url('next.png');
+        }
+
+        .ui-datepicker .ui-icon {
+            display: block;
+            text-indent: -99999px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            left: .5em;
+            top: .3em;
+        }
+
+
+        table.ui-datepicker-calendar {
+            width: 298px;
+            height: 237px;
+        }
+
+        .ui-icon-circle-triangle-e {
+            background-position: -48px -192px;
+        }
+
+
+        .ui-datepicker-title {
+            margin-top: 14px;
+        }
+
+        .ui-datepicker table {
+            margin: -1px 3px 0px 1px;
+        }
+
+        .ui-datepicker .ui-datepicker-header {
+            position: relative;
+        }
+
+        .ui-datepicker .ui-datepicker-title {
+            line-height: 32px;
+            text-align: center;
+            margin: 5px 6.3em;
+        }
+
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default,
+        .ui-button,
+        html .ui-button.ui-state-disabled:hover,
+        html .ui-button.ui-state-disabled:active {
+            border: none;
+            background: white;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .ui-state-active,
+        .ui-widget-content .ui-state-active,
+        .ui-widget-header .ui-state-active,
+        a.ui-button:active,
+        .ui-button:active,
+        .ui-button.ui-state-active:hover {
+            border: 1px solid #ffffff;
+            background: #00995D;
+            font-weight: normal;
+            color: #ffffff;
+            font-family: Trebuchet MS;
+        }
+
+        .ui-datepicker th {
+            padding: .7em .3em;
+            text-align: center;
+            font-weight: bold;
+            border: 0.3px solid #E7F0CE;
+            border-top: none;
+        }
+
+        .ui-widget-content {
+            border: none;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: none;
+            width: 298px;
+            height: 298px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .ui-widget {
+            font-family: Trebuchet MS, Regular;
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
     <h2>Datepicker</h2>
     <p><input type="text" id="datepicker" /></p>
-
-    <h2>Date Range</h2>
-    <p>FROM<input type="text" id="fromDate" /> TO <input type="text" id="toDate" /> </p>
 </body>
 
 </html>
