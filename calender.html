@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link href="/fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+    <link href="fontawesome-free-5.9.0-web/css/all.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="datepicker-pt-BR.js"></script>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jquery.maskedinput.js" type="text/javascript"></script>
     <script>
         $(function () {
             $("#datepicker").datepicker({
@@ -17,11 +19,16 @@
                 showOtherMonths: true,
                 selectOtherMonths: true,
             });
+
         });
 
     </script>
 
     <style>
+        .data::after {
+            content: '';
+        }
+
         div#ui-datepicker-div {
             border-radius: 24px;
             padding: 0px;
@@ -95,7 +102,6 @@
             left: .5em;
             top: .3em;
         }
-
 
         table.ui-datepicker-calendar {
             width: 298px;
@@ -203,7 +209,7 @@
         .data {
             position: absolute;
             font-family: "Font Awesome 5 Free";
-            font-weight: 900;
+            font-weight: 400;
             content: '\f133';
             z-index: 1;
         }
@@ -211,17 +217,21 @@
         .data::before {
             position: absolute;
             font-family: "Font Awesome 5 Free";
-            font-weight: 900;
+            font-weight: 400;
             content: '\f133';
             z-index: 1;
+            left: 113px;
+            top: 10px;
+            color: #9E9E9E;
+            font-size: 18px;
+
         }
     </style>
 </head>
 
 <body>
     <h2>Datepicker</h2>
-    <label class="data"><input type="text" id="datepicker" /></label>
-
+    <label class="data" id="data"><input type="text" id="datepicker" placeholder="dd/mm/aaaa " /></label>
 
 </body>
 
