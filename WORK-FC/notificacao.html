@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <link href="/fontawesome-free-5.9.0-web/css/all.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <title>Document</title>
   <style>
     * {
@@ -52,8 +53,9 @@
     .user-menu {
       position: absolute;
       background-color: #fff;
-      width: 105px;
-      border-radius: 4px;
+      width: 257px;
+      height: 173;
+      border-radius: 8px;
       border: 1px solid rgba(0, 0, 0, 0.15);
       padding-top: 5px;
       padding-bottom: 5px;
@@ -67,6 +69,19 @@
       color: #444;
       font-size: 14px;
       padding: 5px 10px;
+    }
+
+    .titulo-notificacao{
+      display: block;
+      text-decoration: none;
+      color: #00995D;
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+
+    .titulo-notificacao:hover{
+      background-color: #245F40;
+      color: #f1f1f1;
     }
 
     .user-menu .user-menu-link:hover {
@@ -101,35 +116,81 @@
       height: 41px;
     }
 
+    .far{
+      text-align: right;
+      margin-left: 213px;
+    }
+
+    .bell{
+      width: 9px;
+      height: 20px;
+      margin-top: -38px;
+      font-size: 29px;
+      color: #F1F2F1;
+    }
+
+    .p{
+      font-size: 12px;
+      text-align: left;
+      font-family: 'Trebuchet MS', sans-serif
+    }
+
+    .mini{
+      border-radius: 50%;
+      margin-left: 0px;
+      border:2px solid #00995D;
+      align:left;
+    }
 
   </style>
 </head>
 
 <body>
   <div class="nav-bar">
-  <div class="user-menu-wrap"></div><a class="mini-photo-wrapper" href="#"><img class="mini-photo"
+  <div class="user-menu-wrap"></div>
+     
+  <a class="mini-photo-wrapper" href="#"><img class="mini-photo"
       src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
       width="40" height="40" /></a>
-      <div class="bell">
-       <i class="far fa-bell"></i>
-      </div>
+      
+      
+      <div class="bell"><a href="#n">
+       <i class="far fa-bell" ></i>
       </a>
+      </div>
+    </a>
+
     </div>
+
   <div class="menu-container">
     <ul class="user-menu">
-      <li class="user-menu__item"><a class="user-menu-link" href="#">My Profile</a></li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Search</a></li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Messages</a></li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Activity</a></li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Settings</a></li>
+      <a><img class="mini"
+        src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
+        width="40" height="40" /></a>
+        <li class="user-menu__item"><a class="titulo-notificacao" href="#">Nome</a>
+        <p>loremipsum@unimed.coop.br</p>
+        <p>mais alguma info</p>
+        <hr>
+      </li>
+      <li class="user-menu__item"><a class="user-menu-link" href="#">Configuração</a><p>Ajuda</p></li><hr>
+      <li class="user-menu__item"><a class="user-menu-link" href="#">Sair</a></li>
+   </ul>
+  </div>
+
+  <div class="menu-container">
+    <ul class="user-menu">
+      <li class="user-menu__item"><a class="user-menu-link" href="#n">Notificações</a></li>
+      <li class="user-menu__item"><a class="user-menu-link" href="#n">Lorem ipsum notificação mais ou menos pra ter noção de espaçamento.</a></li>
+      <li class="user-menu__item"><a class="user-menu-link" href="#n"></a>Lorem ipsum notific
+        ação gigante para ter noção de espaçamento e de como essa área se comportará com tanta informação assim. A
+        AAAAAAAAAAAAAAAAAAAAAAAa</li>
+      <li class="user-menu__item"><a class="user-menu-link" href="#n">Lorem ipsum notificação mais ou menos pra ter noção de espaçamento.</a></li>
     </ul>
   </div>
   </div>
   <script>
     document.querySelector('.mini-photo-wrapper').addEventListener('click', function () {
-     
       document.querySelector('.menu-container').classList.toggle('active');
-
     }); 
       
   </script>
