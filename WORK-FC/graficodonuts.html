@@ -1,0 +1,58 @@
+Grafico Donuts
+ <div class="grid">
+  <section>
+    <h2>Positivo</h2>
+    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+      <circle class="circle-chart__background" stroke="#efefef" stroke-width="6" stroke-height="7" fill="none" cx="16.91549431" cy="16.91549431" r="12.91549000" />
+      <circle class="circle-chart__circle" stroke="#00995D" stroke-width="6" stroke-height="7" stroke-dasharray="65,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="12.91549000" />
+      <g class="circle-chart__info">
+        <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8">70%</text>
+      </g>
+    </svg>
+  </section>
+</div>
+
+<style>
+   
+.circle-chart__circle {
+  animation: circle-chart-fill 2s reverse;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.circle-chart__info {
+  animation: circle-chart-appear 2s forwards;
+  opacity: 0;
+  transform: translateY(0.3em);
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  font-family: sans-serif;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.grid {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 31em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
