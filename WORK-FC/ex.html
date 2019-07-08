@@ -41,7 +41,7 @@
         text-decoration: none;
         margin: 0 1px;
         padding: 15px 20px;
-        border-top: 1px solid #555;
+        border-top: 1px solid #FFF;
         display: block;
     }
 
@@ -50,8 +50,8 @@
     }
 
     #nav ul li a:hover {
-        background: #066;
-        color: #FFF;
+        background: #FFF;
+        color: #555;
     }
 
     #nav li:hover ul {
@@ -65,14 +65,68 @@
     }
 
     #nav li:hover a {
-        background: #333;
-        color: #FFF;
+        background: #FFF;
+        color: #555;
     }
 
     #nav li:hover li a:hover {
-        background: #222;
+        background: #009955;
+        color: #FFF;
     }
 
+    .menu{
+      position: absolute;
+      background-color: #fff;
+      width: 257px;
+      height: 173;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-top: 15px;
+      margin-left: 189px;
+      border-radius: 20px;
+    }
+
+    .menu::before{
+      position: absolute;
+      top: -16px;
+      left: 72px;
+      display: inline-block;
+      content: "";
+      border: 8px solid transparent;
+      border-bottom-color: #ccc;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .menu::after{
+      position: absolute;
+      top: -14px;
+      left: 73px;
+      display: inline-block;
+      content: "";
+      border: 7px solid transparent;
+      border-bottom-color: #fff;
+    }
+
+    a.mini-photo-wrapper {
+    max-width: 10px;
+    max-height: 20px;
+    border-radius: 101px;
+}
+
+img.mini-photo {
+    padding-left: -10px;
+    position: relative;
+    right: 20px;
+    bottom: 16px;
+    border-radius: 30px;
+}
+
+img{
+    width: 51px;
+    height: 51px;
+}
     
 </style>
 
@@ -80,7 +134,7 @@
     <div id="nav">
         <ul>
             <li><a href="#">Notificação</a>
-                <ul>
+                <ul class="menu">
                     <li><a href="#">Lorem ipsum notificação mais ou menos pra ter noção de espaçamento.</a></li>
                     <li><a href="#">Lorem ipsum notificação gigante para ter noção de espaçamento e de como essa área se
                             comportará com tanta informação assim. AAAAAAAAAAAAAAAAAAAAAAAAa</a></li>
@@ -88,15 +142,15 @@
                     <li><a href="#">Ver mais</a></li>
                 </ul>
             </li>
-            <li><div class="bell"><a href="#"></a></div>
-                <ul>
+            <li><div class="bell"><a href="#"></a><i class="far fa-bell"></i></div>
+                <ul class="menu">
                     <li><a href="#">Nome do Processo redu...<p>Local do Processamento</p></a></li>
                     <li><a href="#">Nome do Processo redu...<p>Local do Processamento</p></a></li>
                     <li><a href="#">Ver mais</a></li>
                 </ul>
             </li>
             <li><a class="mini-photo-wrapper" href="#"><img class="mini-photo" src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg" width="40" height="40" /></a></a>
-                <ul>
+                <ul class="menu">
                     <li><a><img class="mini" src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg" width="40" height="40" />Nome<p>loremipsum@unimed.coop.br</p><p>mais alguma info</p></a></li>
                     <li><a href="#">Configuração</a></li>
                     <li><a href="#">Ajuda</a></li>

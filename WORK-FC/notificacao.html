@@ -71,7 +71,7 @@
       padding: 5px 10px;
     }
 
-    .titulo-notificacao{
+    .titulo-notificacao {
       display: block;
       text-decoration: none;
       color: #00995D;
@@ -79,7 +79,7 @@
       padding: 5px 10px;
     }
 
-    .titulo-notificacao:hover{
+    .titulo-notificacao:hover {
       background-color: #245F40;
       color: #f1f1f1;
     }
@@ -110,18 +110,18 @@
       border-bottom-color: #fff;
     }
 
-    .nav-bar{
+    .nav-bar {
       background-color: #4183c4;
       width: 292px;
       height: 41px;
     }
 
-    .far{
+    .far {
       text-align: right;
       margin-left: 213px;
     }
 
-    .bell{
+    .bell {
       width: 9px;
       height: 20px;
       margin-top: -38px;
@@ -129,70 +129,83 @@
       color: #F1F2F1;
     }
 
-    .p{
+    .p {
       font-size: 12px;
       text-align: left;
       font-family: 'Trebuchet MS', sans-serif
     }
 
-    .mini{
+    .mini {
       border-radius: 50%;
       margin-left: 0px;
-      border:2px solid #00995D;
+      border: 2px solid #00995D;
       width: 60px;
       height: 60px;
-      
-    }
 
+    }
   </style>
 </head>
 
 <body>
   <div class="nav-bar">
-  <div class="user-menu-wrap"></div>
-     
-  <a class="mini-photo-wrapper" href="#"><img class="mini-photo"
-      src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
-      width="40" height="40" /></a>   
-    </a>
-        <div class="bell"><a href="#">
-         <i class="far fa-bell" ></i>
-        </a>
-        </div>
-   </div>
+    <div class="user-menu-wrap"></div>
 
-  <div class="menu-container">
-    <ul class="user-menu">
-      <a><img class="mini"
+    <a class="mini-photo-wrapper" href="#"><img class="mini-photo"
         src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
-         width="40" height="40" />
-        <li class="user-menu__item"><a class="titulo-notificacao" href="#" text-align="top">Nome</a>
+        width="40" height="40" /></a>
+    <div class="menu-container">
+      <ul class="user-menu">
+        <a><img class="mini"
+            src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
+            width="40" height="40" />
+          <li class="user-menu__item"><a class="titulo-notificacao" href="#">Nome</a>
+            <p>loremipsum@unimed.coop.br</p>
         </a>
-        <p>loremipsum@unimed.coop.br</p>
         <p>mais alguma info</p>
+        </li>
+        <li class="user-menu__item"><a class="user-menu-link" href="#">Configuração</a>
+          <p>Ajuda</p>
+        </li>
         <hr>
-      </li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Configuração</a><p>Ajuda</p></li><hr>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Sair</a></li>
-   </ul>
+        <li class="user-menu__item"><a class="user-menu-link" href="#">Sair</a></li>
+      </ul>
+    </div>
+
+    <div class="bell"><a href="#">
+      <li>
+        <i class="far fa-bell"></i>
+      </a>
+      <ul class="menu">
+          <li><a href="#">Nome do Processo redu...<p>Local do Processamento</p></a></li>
+          <li><a href="#">Nome do Processo redu...<p>Local do Processamento</p></a></li>
+          <li><a href="#">Ver mais</a></li>
+      </ul>
+    </li>
+    </div>
+    </a>
+
   </div>
 
   <div class="menu-container">
     <ul class="user-menu">
       <li class="user-menu__item"><a class="user-menu-link" href="#">Notificações</a></li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Lorem ipsum notificação mais ou menos pra ter noção de espaçamento.</a></li>
+      <li class="user-menu__item"><a class="user-menu-link" href="#">Lorem ipsum notificação mais ou menos pra ter noção
+          de espaçamento.</a></li>
       <li class="user-menu__item"><a class="user-menu-link" href="#"></a>Lorem ipsum notific
         ação gigante para ter noção de espaçamento e de como essa área se comportará com tanta informação assim. A
         AAAAAAAAAAAAAAAAAAAAAAAa</li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Lorem ipsum notificação mais ou menos pra ter noção de espaçamento.</a></li>
+      <li class="user-menu__item"><a class="user-menu-link" href="#">Lorem ipsum notificação mais ou menos pra ter noção
+          de espaçamento.</a></li>
     </ul>
   </div>
+
   </div>
   <script>
     document.querySelector('.mini-photo-wrapper').addEventListener('click', function () {
       document.querySelector('.menu-container').classList.toggle('active');
-    }); 
-      
+    });
+
   </script>
 </body>
+
 </html>
