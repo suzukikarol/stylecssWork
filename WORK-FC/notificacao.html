@@ -1,56 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <link href="/fontawesome-free-5.9.0-web/css/all.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu com submenu</title>
+    <meta charset="UTF-8">
+    <link href="/fontawesome-free-5.9.0-web/css/all.min.css" rel="stylesheet">
 
-  <title>Document</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+</head>
 
+<style>
     body {
-      background-color: #f1f1f1;
-      font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ccc;
     }
 
-    ul {
-      list-style: none;
+    #nav {
+        float: left;
+        margin: 50px;
+        background-color: #FFF;
+        height: 50px;
+        width: 270px;
+
     }
 
-    .user-menu-wrap {
-      position: relative;
-      width: 36px;
-      margin: 50px auto;
+    #nav ul {
+        font: 16px arial, tahoma, verdana;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
-    .mini-photo-wrapper {
-      display: block;
+    #nav ul li {
+        float: left;
+        position: relative;
+        display: block;
     }
 
-    .mini-photo {
-      border-radius: 50%;
-      margin-left: 250px;
+    #nav ul li a {
+        color: #555;
+        background: #FFF;
+        text-decoration: none;
+        margin: 0 1px;
+        padding: 15px 20px;
+        border-top: 1px solid #FFF;
+        display: block;
     }
 
-    .menu-container {
-      visibility: hidden;
-      opacity: 0;
+    #nav li ul {
+        display: none;
     }
 
-    .menu-container.active {
-      visibility: visible;
-      opacity: 1;
-      transition: all .3s ease-in-out;
+    #nav ul li a:hover {
+        background: #FFF;
+        color: #555;
     }
 
-    .user-menu {
+    #nav li:hover ul {
+        display: block;
+        position: relative;
+
+    }
+
+    #nav li:hover li {
+        float: none;
+        font-size: 12px;
+    }
+
+    #nav li:hover a {
+        background: #FFF;
+        color: #555;
+    }
+
+    #nav li:hover li a:hover {
+        background: #009955;
+        color: #FFF;
+    }
+
+    .menu{
       position: absolute;
       background-color: #fff;
       width: 257px;
@@ -61,35 +89,10 @@
       padding-bottom: 5px;
       margin-top: 15px;
       margin-left: 189px;
+      border-radius: 20px;
     }
 
-    .user-menu .user-menu-link {
-      display: block;
-      text-decoration: none;
-      color: #444;
-      font-size: 14px;
-      padding: 5px 10px;
-    }
-
-    .titulo-notificacao {
-      display: block;
-      text-decoration: none;
-      color: #00995D;
-      font-size: 16px;
-      padding: 5px 10px;
-    }
-
-    .titulo-notificacao:hover {
-      background-color: #245F40;
-      color: #f1f1f1;
-    }
-
-    .user-menu .user-menu-link:hover {
-      background-color: #4183c4;
-      color: #fff;
-    }
-
-    .user-menu:before {
+    .menu::before{
       position: absolute;
       top: -16px;
       left: 72px;
@@ -100,7 +103,7 @@
       border-bottom-color: rgba(0, 0, 0, 0.15);
     }
 
-    .user-menu:after {
+    .menu::after{
       position: absolute;
       top: -14px;
       left: 73px;
@@ -110,102 +113,69 @@
       border-bottom-color: #fff;
     }
 
-    .nav-bar {
-      background-color: #4183c4;
-      width: 292px;
-      height: 41px;
+    a.mini-photo-wrapper {
+    max-width: 10px;
+    max-height: 20px;
+    border-radius: 101px;
     }
 
-    .far {
-      text-align: right;
-      margin-left: 213px;
+    img.mini-photo {
+        padding-left: -10px;
+        position: relative;
+        right: 20px;
+        bottom: 16px;
+        border-radius: 30px;
+    }
+
+    img{
+        width: 51px;
+        height: 51px;
+    }
+
+    .options {
+        border-radius: 8px;
     }
 
     .bell {
-      width: 9px;
-      height: 20px;
-      margin-top: -38px;
-      font-size: 29px;
-      color: #F1F2F1;
-    }
+            position: absolute;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            content: '\f0f3';
+            z-index: 1;
+        }
 
-    .p {
-      font-size: 12px;
-      text-align: left;
-      font-family: 'Trebuchet MS', sans-serif
-    }
-
-    .mini {
-      border-radius: 50%;
-      margin-left: 0px;
-      border: 2px solid #00995D;
-      width: 60px;
-      height: 60px;
-
-    }
-  </style>
-</head>
+    
+</style>
 
 <body>
-  <div class="nav-bar">
-    <div class="user-menu-wrap"></div>
-
-    <a class="mini-photo-wrapper" href="#"><img class="mini-photo"
-        src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
-        width="40" height="40" /></a>
-    <div class="menu-container">
-      <ul class="user-menu">
-        <a><img class="mini"
-            src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
-            width="40" height="40" />
-          <li class="user-menu__item"><a class="titulo-notificacao" href="#">Nome</a>
-            <p>loremipsum@unimed.coop.br</p>
-        </a>
-        <p>mais alguma info</p>
-        </li>
-        <li class="user-menu__item"><a class="user-menu-link" href="#">Configuração</a>
-          <p>Ajuda</p>
-        </li>
-        <hr>
-        <li class="user-menu__item"><a class="user-menu-link" href="#">Sair</a></li>
-      </ul>
-    </div>
-
-    <div class="bell"><a href="#">
-      <li>
-        <i class="far fa-bell"></i>
-      </a>
-      <ul class="menu">
-          <li><a href="#">Nome do Processo redu...<p>Local do Processamento</p></a></li>
-          <li><a href="#">Nome do Processo redu...<p>Local do Processamento</p></a></li>
-          <li><a href="#">Ver mais</a></li>
-      </ul>
-    </li>
-    </div>
-    </a>
-
-  </div>
-
-  <div class="menu-container">
-    <ul class="user-menu">
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Notificações</a></li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Lorem ipsum notificação mais ou menos pra ter noção
-          de espaçamento.</a></li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#"></a>Lorem ipsum notific
-        ação gigante para ter noção de espaçamento e de como essa área se comportará com tanta informação assim. A
-        AAAAAAAAAAAAAAAAAAAAAAAa</li>
-      <li class="user-menu__item"><a class="user-menu-link" href="#">Lorem ipsum notificação mais ou menos pra ter noção
-          de espaçamento.</a></li>
-    </ul>
-  </div>
-
-  </div>
-  <script>
-    document.querySelector('.mini-photo-wrapper').addEventListener('click', function () {
-      document.querySelector('.menu-container').classList.toggle('active');
-    });
-
-  </script>
+    <div id="nav">
+        <ul>
+            <li><a href="#">Notificação</a>
+                <ul class="menu">
+                    <li><a href="#" class="options">Lorem ipsum notificação mais ou menos pra ter noção de espaçamento.</a></li>
+                    <li><a href="#" class="options">Lorem ipsum notificação gigante para ter noção de espaçamento e de como essa área se
+                            comportará com tanta informação assim. AAAAAAAAAAAAAAAAAAAAAAAAa</a></li>
+                    <li><a href="#" class="options">Lorem ipsum notificação mais ou menos pra ter noção de espaçamento.</a></li>
+                    <li><a href="#" class="options">Ver mais</a></li>
+                </ul>
+            </li>
+            <li><div><label class="bell"></label><i class="far fa-bell"></i><a href="#"></a></div>
+                <ul class="menu">
+                    <li><a href="#" class="options">Nome do Processo redu...<p>Local do Processamento</p></a></li>
+                    <li><a href="#" class="options">Nome do Processo redu...<p>Local do Processamento</p></a></li>
+                    <li><a href="#" class="options">Ver mais</a></li>
+                </ul>
+            </li>
+            <li><a class="mini-photo-wrapper" href="#"><img class="mini-photo" src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg" width="40" height="40" /></a></a>
+                <ul class="menu">
+                    <li><a class="options"><img class="mini" src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg" width="40" height="40" />Nome<p>loremipsum@unimed.coop.br</p><p>mais alguma info</p></a></li>
+                    <li><a href="#" class="options">Configuração</a></li>
+                    <li><a href="#" class="options">Ajuda</a></li>
+                    <li><a href="#" class="options">Sair</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div>
 </body>
 
 </html>
