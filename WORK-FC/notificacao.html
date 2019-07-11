@@ -11,170 +11,45 @@
 
 <style>
     body {
-        margin: 0;
-        padding: 0;
-        background: #ccc;
+        background-color: #ccc;
     }
 
-    #nav {
-
-        margin: 50px;
-        background-color: #FFF;
-        height: 50px;
-        width: 130px;
-        display: inline-block;
-
-    }
-
-    #nav ul {
-        font: 16px arial, tahoma, verdana;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        height: 50px;
-        width: 130px;
-        display: inline-block;
-    }
-
-    #nav ul li {
+    .nav ul li {
         float: left;
-        position: relative;
+        width: 100px;
+        height: 40px;
         display: inline-block;
-        height: 50px;
-        width: 67px;
+        text-align: center;
+        line-height: 40px;
     }
 
-    #nav ul li a {
-        color: #555;
-        background: #FFF;
-        text-decoration: none;
-        margin: 0 1px;
-        padding: 15px 20px;
-        border-top: 1px solid #FFF;
-        display: inline-block;
-        height: 50px;
-        width: 130px;
+    .nav ul li :hover {
+        background-color: #009955;
     }
 
-    #nav li ul {
+    .nav ul ul {
         display: none;
-        height: 50px;
-        width: 110px;
     }
 
-    #nav ul li a:hover {
-        background: #FFF;
-        color: #555;
-        height: 50px;
-        width: 130px;
-    }
-
-    #nav li:hover ul {
-        display: inline-block;
-        position: relative;
-        height: 50px;
-        width: 130px;
-
-    }
-
-    #nav li:hover li {
-        float: none;
-        font-size: 12px;
-        height: 50px;
-        width: 130px;
-    }
-
-    #nav li:hover a {
-        background: #FFF;
-        color: #555;
-        height: 50px;
-        width: 130px;
-    }
-
-    #nav li:hover li a:hover {
-        background: #009955;
-        color: #FFF;
-        height: 50px;
-        width: 130px;
-    }
-
-    .menu {
-        position: absolute;
-        background-color: #fff;
-        height: 173px;
-        width: 257px;
-        border-radius: 8px;
-        border: 1px solid rgba(0, 0, 0, 0.15);
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-top: 15px;
-        margin-left: 189px;
-        border-radius: 20px;
-    }
-
-    .menu::before {
-        position: absolute;
-        top: -16px;
-        left: 72px;
-        display: inline-block;
-        content: "";
-        border: 8px solid transparent;
-        border-bottom-color: #ccc;
-        border-bottom-color: rgba(0, 0, 0, 0.15);
-    }
-
-    .menu::after {
-        position: absolute;
-        top: -14px;
-        left: 73px;
-        display: inline-block;
-        content: "";
-        border: 7px solid transparent;
-        border-bottom-color: #fff;
-    }
-
-    a.mini-photo-wrapper {
-        max-width: 10px;
-        max-height: 20px;
-        border-radius: 101px;
-    }
-
-    img.mini-photo {
-        padding-left: -10px;
-        position: relative;
-        right: 20px;
-        bottom: 16px;
-        border-radius: 30px;
-    }
-
-    img {
-        width: 51px;
-        height: 51px;
+    .nav ul li:hover>ul {
+        display: block;
     }
 
     .options {
-        border-radius: 8px;
-        height: 173px;
+        background-color: #ffffff;
     }
 
-    .bell {
-        position: absolute;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: '\f0f3';
-        z-index: 1;
-    }
-
-    .bot {
-        background-color: #009955;
-
+    .imagem {
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
     }
 </style>
 
 <body>
-    <div id="nav">
+    <div class="nav">
         <ul>
-            <li class="bot"><a href="#">Notificação</a>
+            <li><i class="far fa-chart-bar"></i>
                 <ul class="menu">
                     <li><a href="#" class="options">Lorem ipsum notificação mais ou menos pra ter noção de
                             espaçamento.</a></li>
@@ -185,22 +60,21 @@
                             espaçamento.</a></li>
                     <li><a href="#" class="options">Ver mais</a></li>
                 </ul>
+
             </li>
-            <li class="bot">
-                <label class="bell"></label><a href="#"></a>
+            <li><i class="far fa-bell"></i>
                 <ul class="menu">
                     <li><a href="#" class="options">Nome do Processo redu...<p>Local do Processamento</p></a></li>
                     <li><a href="#" class="options">Nome do Processo redu...<p>Local do Processamento</p></a></li>
                     <li><a href="#" class="options">Ver mais</a></li>
                 </ul>
             </li>
-            <li class="bot"><a class="mini-photo-wrapper" href="#"><img class="mini-photo"
-                        src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
-                        width="40" height="40" /></a></a>
+            <li><img src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
+                    class="imagem" />
                 <ul class="menu">
-                    <li><a class="options"><img class="mini"
+                    <li><a class="options"><img
                                 src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
-                                width="40" height="40" />Nome<p>loremipsum@unimed.coop.br</p>
+                                class="imagem" />Nome<p>loremipsum@unimed.coop.br</p>
                             <p>mais alguma info</p>
                         </a></li>
                     <li><a href="#" class="options">Configuração</a></li>
@@ -208,6 +82,7 @@
                     <li><a href="#" class="options">Sair</a></li>
                 </ul>
             </li>
+
         </ul>
     </div>
 </body>
