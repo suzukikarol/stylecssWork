@@ -14,6 +14,15 @@
         background-color: #ccc;
     }
 
+
+    .nav {
+        margin: 10px;
+        background-color: #FFF;
+        width: 350px;
+        color: #555;
+        display: inline-block;
+    }
+
     .nav ul li {
         float: left;
         width: 100px;
@@ -23,16 +32,65 @@
         line-height: 40px;
     }
 
+    .nav ul li a {
+        text-decoration: none;
+        margin: 0 3px 5px;
+        border-top: 1px solid #FFF;
+        height: 50px;
+        width: 100px;
+    }
+
     .nav ul ul {
         display: none;
     }
 
     .nav ul li:hover>ul {
+        background-color: #ffffff;
         display: block;
+        width: 257px;
+        height: 173pxd;
+    }
+
+    .nav li:hover ul {
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav li:hover li {
+        float: none;
+        font-size: 12px;
+    }
+
+    .menu {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        text-align: left;
+        d
+    }
+
+    .menu::before {
+        content: "";
+        top: -16px;
+        left: 72px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .menu::after {
+        position: absolute;
+        top: -14px;
+        left: 30px;
+        content: "";
+        border: 7px solid transparent;
+        border-bottom-color: #fff;
     }
 
     .options {
         background-color: #ffffff;
+        text-align: left;
+        display: inline-block;
     }
 
     .imagem {
@@ -47,35 +105,49 @@
         <ul>
             <li><i class="far fa-chart-bar"></i>
                 <ul class="menu">
-                    <li><a href="#" class="options">Lorem ipsum notificação mais ou menos pra ter noção de
-                            espaçamento.</a></li>
-                    <li><a href="#" class="options">Lorem ipsum notificação gigante para ter noção de espaçamento e de
-                            como essa área se
-                            comportará com tanta informação assim. AAAAAAAAAAAAAAAAAAAAAAAAa</a></li>
-                    <li><a href="#" class="options">Lorem ipsum notificação mais ou menos pra ter noção de
-                            espaçamento.</a></li>
+                    <li>
+                        <p> ipsum notificação mais ou menos pra ter noção de espaçamento.</p>
+                    </li>
+                    <li>
+                        <p>ipsum notificação gigante para ter noção de espaçamento e de como essa área se comportará com
+                            tanta informação assim. AAAAAAAAAAAAAAAAAAAAAAAAa.</p>
+                    </li>
+                    <li>
+                        <p> ipsum notificação mais ou menos pra ter noção de espaçamento.</p>
+                    </li>
                     <li><a href="#" class="options">Ver mais</a></li>
                 </ul>
 
             </li>
             <li><i class="far fa-bell"></i>
                 <ul class="menu">
-                    <li><a href="#" class="options">Nome do Processo redu...<p>Local do Processamento</p></a></li>
-                    <li><a href="#" class="options">Nome do Processo redu...<p>Local do Processamento</p></a></li>
+                    <li>
+                        <p>Nome do Processo redu...</p>
+                        <p>Local do Processamento</p>
+                    </li>
+                    <li>
+                        <p> do Processo redu...</p>
+                        <p>Local do Processamento</p>
+                    </li>
                     <li><a href="#" class="options">Ver mais</a></li>
                 </ul>
             </li>
             <li><img src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
                     class="imagem" />
                 <ul class="menu">
-                    <li><a class="options"><img
-                                src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
-                                class="imagem" />Nome<p>loremipsum@unimed.coop.br</p>
-                            <p>mais alguma info</p>
-                        </a></li>
-                    <li><a href="#" class="options">Configuração</a></li>
-                    <li><a href="#" class="options">Ajuda</a></li>
-                    <li><a href="#" class="options">Sair</a></li>
+                    <li><img src="https://comoequetala.com.br/images/com_vagasejobs/usuarios/foto/43247-600x600_8c85f57c72994a99ebde62fc2a0067dc.jpg"
+                            class="imagem" />
+                        <p>Nome</p>
+                        <p>loremipsum@unimed.coop.br</p>
+                        <p>mais alguma info</p>
+                    </li>
+                    <li>
+                        <p>Configuração</p>
+                        <p>Ajuda</p>
+                    </li>
+                    <li>
+                        <p>Sair</p>
+                    </li>
                 </ul>
             </li>
 
